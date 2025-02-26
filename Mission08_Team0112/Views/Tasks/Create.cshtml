@@ -32,7 +32,7 @@
         <select class="form-control" id="Category" name="Category">
             @foreach (var category in ViewBag.Categories)
             {
-                <option value="@category.Id">@category.Name</option>
+                <option value="@category.Value">@category.Text</option>
             }
         </select>
     </div>

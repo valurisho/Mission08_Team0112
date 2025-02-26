@@ -25,7 +25,7 @@ namespace Mission08_Team0112.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Save to database logic here (if connected)
+                // TODO: Save to the database (currently, no DB is connected)
                 return RedirectToAction("Index");
             }
 
