@@ -1,18 +1,106 @@
-@model TModel
-
 @{
     Layout = null;
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title>title</title>
-</head>
-<body>
-<div>
-      
+@* First row *@
+<div class="row">
+    <div class="col">
+        <h3>Stephen Covey's Time Management Matrix</h3>
+    </div>
 </div>
-</body>
-</html>
+
+@* Second row *@
+<div class="row">
+    <div class="col-2">
+        <!-- this is the blank space -->
+    </div>
+    
+    <div class="col-5">
+        <h4>Urgent</h4>
+    </div>
+    
+    <div class="col-5">
+        <h4>Not Urgent</h4>
+    </div>
+    
+</div>
+
+@* Third row *@
+<div class="row">
+    <div class="col-2">
+        <h4>Important</h4>
+    </div>
+    
+    <div class="col-5">
+        <h5>Quadrant 1</h5>
+        <br>
+        
+        @foreach (var task in Model)
+        {
+            if (task.Quadrant == 1)
+            {
+                <p>task.TaskName</p>
+            }
+        }
+    </div>
+    
+    <div class="col-5">
+        <h5>Quadrant 2</h5>
+    </div>
+    
+</div>
+
+@* Fourth row *@
+<div class="row">
+    <div class="col-2">
+        <h4>Not Important</h4>
+    </div>
+    
+    <div class="col-5">
+        <h5>Quadrant 3</h5>
+    </div>
+    
+    <div class="col-5">
+        <h5>Quadrant 4</h5>
+    </div>
+    
+</div>
+
+
+
+
+<table class="table table-bordered">
+    <thead class="fw-bold">
+        <tr>
+            <td>Task</td>
+            <td>Due Date</td>
+            <td>Quadrant</td>
+            <td>Category</td>
+            <td>Completed</td>
+            <td>Edit</td>
+            <td>Delete</td>
+        </tr>
+    </thead>
+    
+    <tbody>
+    @foreach (var task in Model)
+    {
+        <tr>
+            <td>@task.Task</td>
+            <td>@task.DueDate</td>
+            <td>@task.Quadrant</td>
+            <td>@task.Category</td>
+            <td>@task.Completed</td>
+            
+            @* Edit and Delete Buttons*@
+
+            <td><a class="btn btn-info" asp-controller="Home" asp-action="Edit" asp-route-id="@task.TaskId">Edit</a></td>
+            <td><a class="btn btn-danger" asp-controller="Home" asp-action="Delete" asp-route-id="@task.TaskId">Delete</a></td>
+        </tr>
+    }
+    
+    </tbody>
+    
+</table>
+
+
