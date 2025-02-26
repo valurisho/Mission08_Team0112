@@ -20,3 +20,13 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%; /* Ensures it takes the full height of the parent */
+}
