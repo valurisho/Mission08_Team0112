@@ -1,0 +1,120 @@
+<div class="container border border-dark border-3 rounded-3 bg-light">
+    
+    @* First row *@
+    <div class="row">
+        <div class="col-12 text-center border-bottom border-dark">
+            <h3>Stephen Covey's Time Management Matrix</h3>
+            <br>
+        </div>
+    </div>
+   
+
+    
+    @* Second row *@
+    <div class="row text-center border-bottom border-dark">
+        <div class="col-2 d-flex align-items-center justify-content-center border-end border-dark">
+            <!-- Blank space -->
+        </div>
+        <div class="col-5 border-end border-dark">
+            <h4>Urgent</h4>
+            
+        </div>
+        <div class="col-5">
+            <h4>Not Urgent</h4>
+            
+        </div>
+    </div>
+
+
+    @* Third row *@
+    <div class="row text-center">
+        <div class="col-2 d-flex align-items-center justify-content-center border-end border-dark">
+            <h4 class="vertical-text">Important</h4>
+        </div>
+
+        <div class="col-5 text-center border-end border-dark">
+            <h6 class="fw-bold">Quadrant 1</h6>
+            <p>Read Scrum Book</p>
+            <p>Read Scrum Book</p>
+            <p>Read Scrum Book</p>
+            <p>Read Scrum Book</p>
+         
+            
+        </div>
+
+        <div class="col-5 text-center">
+            <h6 class="fw-bold">Quadrant 2</h6>
+            <p>IS 414 Test </p>
+            <p>Read Scrum Book</p>
+            <p>Read Scrum Book</p>
+            <p>Read Scrum Book</p>
+            <p>Read Scrum Book</p>
+        </div>
+
+    </div>
+
+    @* Fourth row *@
+    <div class="row text-center border-top border-dark">
+        <div class="col-2 d-flex align-items-center justify-content-center border-end border-dark">
+            <h4 class="vertical-text">Not Important</h4>
+        </div>
+
+        <div class="col-5 text-center border-end border-dark">
+            <h6 class="fw-bold">Quadrant 3</h6>
+            <p>Read Scrum Book</p>
+            <p>Read Scrum Book</p>
+            <p>Read Scrum Book</p>
+            <p>Read Scrum Book</p>
+        </div>
+
+        <div class="col-5 text-center">
+            <h6 class="fw-bold">Quadrant 4</h6>
+            <p>Read Scrum Book</p>
+            <p>Read Scrum Book</p>
+            <p>Read Scrum Book</p>
+            <p>Read Scrum Book</p>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+@* *@
+@* <table class="table table-bordered"> *@
+@*     <thead class="fw-bold"> *@
+@*         <tr> *@
+@*             <td>Task</td> *@
+@*             <td>Due Date</td> *@
+@*             <td>Quadrant</td> *@
+@*             <td>Category</td> *@
+@*             <td>Completed</td> *@
+@*             <td>Edit</td> *@
+@*             <td>Delete</td> *@
+@*         </tr> *@
+@*     </thead> *@
+@*      *@
+@*     <tbody> *@
+@*     $1$ @foreach (var task in Model) #1# *@
+@*     $1$ { #1# *@
+@*     $1$     <tr> #1# *@
+@*     $1$         <td>@task.Task</td> #1# *@
+@*     $1$         <td>@task.DueDate</td> #1# *@
+@*     $1$         <td>@task.Quadrant</td> #1# *@
+@*     $1$         <td>@task.Category</td> #1# *@
+@*     $1$         <td>@task.Completed</td> #1# *@
+@*     $1$          #1# *@
+@*             $1$ Edit and Delete Buttons#1# *@
+@* *@
+@*             $1$ <td><a class="btn btn-info" asp-controller="Home" asp-action="Edit" asp-route-id="@task.TaskId">Edit</a></td> #1# *@
+@*             $1$ <td><a class="btn btn-danger" asp-controller="Home" asp-action="Delete" asp-route-id="@task.TaskId">Delete</a></td> #1# *@
+@*         </tr> *@
+@*      *@
+@*     </tbody> *@
+@*      *@
+@* </table> *@
+@* *@
+

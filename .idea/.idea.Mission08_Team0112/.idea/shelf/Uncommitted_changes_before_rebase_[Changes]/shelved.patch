@@ -1,0 +1,275 @@
+Index: Mission08_Team0112/Controllers/HomeController.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>using System.Diagnostics;\nusing Microsoft.AspNetCore.Mvc;\nusing Mission08_Team0112.Models;\n\nnamespace Mission08_Team0112.Controllers;\n\npublic class HomeController : Controller\n{\n    private readonly ILogger<HomeController> _logger;\n\n    public HomeController(ILogger<HomeController> logger)\n    {\n        _logger = logger;\n    }\n\n    public IActionResult Index()\n    {\n        return View();\n    }\n\n    public IActionResult Privacy()\n    {\n        return View();\n    }\n\n    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]\n    public IActionResult Error()\n    {\n        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Mission08_Team0112/Controllers/HomeController.cs b/Mission08_Team0112/Controllers/HomeController.cs
+--- a/Mission08_Team0112/Controllers/HomeController.cs	(revision fa783174efb7215a96f64b794f3b88f43ac11c1c)
++++ b/Mission08_Team0112/Controllers/HomeController.cs	(date 1740590534188)
+@@ -6,26 +6,14 @@
+ 
+ public class HomeController : Controller
+ {
+-    private readonly ILogger<HomeController> _logger;
+-
+-    public HomeController(ILogger<HomeController> logger)
+-    {
+-        _logger = logger;
+-    }
++    public
+ 
+     public IActionResult Index()
+     {
+         return View();
+     }
+-
+-    public IActionResult Privacy()
++    public IActionResult Quadrant()
+     {
+         return View();
+     }
+-
+-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+-    public IActionResult Error()
+-    {
+-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+-    }
+-}
++}
+\ No newline at end of file
+Index: Mission08_Team0112/Views/Shared/_ValidationScriptsPartial.cshtml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><script src=\"~/lib/jquery-validation/dist/jquery.validate.min.js\"></script>\n<script src=\"~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js\"></script>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Mission08_Team0112/Views/Shared/_ValidationScriptsPartial.cshtml b/Mission08_Team0112/Views/Shared/_ValidationScriptsPartial.cshtml
+--- a/Mission08_Team0112/Views/Shared/_ValidationScriptsPartial.cshtml	(revision fa783174efb7215a96f64b794f3b88f43ac11c1c)
++++ b/Mission08_Team0112/Views/Shared/_ValidationScriptsPartial.cshtml	(date 1740589210009)
+@@ -1,2 +1,2 @@
+ <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+-<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
++<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+\ No newline at end of file
+Index: Mission08_Team0112/Models/ErrorViewModel.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>namespace Mission08_Team0112.Models;\n\npublic class ErrorViewModel\n{\n    public string? RequestId { get; set; }\n\n    public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Mission08_Team0112/Models/ErrorViewModel.cs b/Mission08_Team0112/Models/ErrorViewModel.cs
+--- a/Mission08_Team0112/Models/ErrorViewModel.cs	(revision fa783174efb7215a96f64b794f3b88f43ac11c1c)
++++ b/Mission08_Team0112/Models/ErrorViewModel.cs	(date 1740589210003)
+@@ -5,4 +5,4 @@
+     public string? RequestId { get; set; }
+ 
+     public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+-}
++}
+\ No newline at end of file
+Index: Mission08_Team0112/Program.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>var builder = WebApplication.CreateBuilder(args);\n\n// Add services to the container.\nbuilder.Services.AddControllersWithViews();\n\nvar app = builder.Build();\n\n// Configure the HTTP request pipeline.\nif (!app.Environment.IsDevelopment())\n{\n    app.UseExceptionHandler(\"/Home/Error\");\n    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.\n    app.UseHsts();\n}\n\napp.UseHttpsRedirection();\napp.UseStaticFiles();\n\napp.UseRouting();\n\napp.UseAuthorization();\n\napp.MapControllerRoute(\n    name: \"default\",\n    pattern: \"{controller=Home}/{action=Index}/{id?}\");\n\napp.Run();\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Mission08_Team0112/Program.cs b/Mission08_Team0112/Program.cs
+--- a/Mission08_Team0112/Program.cs	(revision fa783174efb7215a96f64b794f3b88f43ac11c1c)
++++ b/Mission08_Team0112/Program.cs	(date 1740589210017)
+@@ -24,4 +24,4 @@
+     name: "default",
+     pattern: "{controller=Home}/{action=Index}/{id?}");
+ 
+-app.Run();
++app.Run();
+\ No newline at end of file
+Index: Mission08_Team0112/Views/_ViewStart.cshtml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>@{\n    Layout = \"_Layout\";\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Mission08_Team0112/Views/_ViewStart.cshtml b/Mission08_Team0112/Views/_ViewStart.cshtml
+--- a/Mission08_Team0112/Views/_ViewStart.cshtml	(revision fa783174efb7215a96f64b794f3b88f43ac11c1c)
++++ b/Mission08_Team0112/Views/_ViewStart.cshtml	(date 1740589210015)
+@@ -1,3 +1,3 @@
+ @{
+     Layout = "_Layout";
+-}
++}
+\ No newline at end of file
+Index: Mission08_Team0112/Views/_ViewImports.cshtml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>@using Mission08_Team0112\n@using Mission08_Team0112.Models\n@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Mission08_Team0112/Views/_ViewImports.cshtml b/Mission08_Team0112/Views/_ViewImports.cshtml
+--- a/Mission08_Team0112/Views/_ViewImports.cshtml	(revision fa783174efb7215a96f64b794f3b88f43ac11c1c)
++++ b/Mission08_Team0112/Views/_ViewImports.cshtml	(date 1740589210014)
+@@ -1,3 +1,3 @@
+ @using Mission08_Team0112
+ @using Mission08_Team0112.Models
+-@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
++@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+\ No newline at end of file
+Index: Mission08_Team0112/Views/Home/Privacy.cshtml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>@{\n    ViewData[\"Title\"] = \"Privacy Policy\";\n}\n<h1>@ViewData[\"Title\"]</h1>\n\n<p>Use this page to detail your site's privacy policy.</p>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Mission08_Team0112/Views/Home/Privacy.cshtml b/Mission08_Team0112/Views/Home/Privacy.cshtml
+--- a/Mission08_Team0112/Views/Home/Privacy.cshtml	(revision fa783174efb7215a96f64b794f3b88f43ac11c1c)
++++ b/Mission08_Team0112/Views/Home/Privacy.cshtml	(date 1740589210012)
+@@ -3,4 +3,4 @@
+ }
+ <h1>@ViewData["Title"]</h1>
+ 
+-<p>Use this page to detail your site's privacy policy.</p>
++<p>Use this page to detail your site's privacy policy.</p>
+\ No newline at end of file
+Index: Mission08_Team0112/Views/Home/Index.cshtml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>@{\n    ViewData[\"Title\"] = \"Home Page\";\n}\n\n<div class=\"text-center\">\n    <h1 class=\"display-4\">Welcome</h1>\n    <p>Learn about <a href=\"https://learn.microsoft.com/aspnet/core\">building Web apps with ASP.NET Core</a>.</p>\n</div>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Mission08_Team0112/Views/Home/Index.cshtml b/Mission08_Team0112/Views/Home/Index.cshtml
+--- a/Mission08_Team0112/Views/Home/Index.cshtml	(revision fa783174efb7215a96f64b794f3b88f43ac11c1c)
++++ b/Mission08_Team0112/Views/Home/Index.cshtml	(date 1740589210011)
+@@ -5,4 +5,4 @@
+ <div class="text-center">
+     <h1 class="display-4">Welcome</h1>
+     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+-</div>
++</div>
+\ No newline at end of file
+Index: Mission08_Team0112/Views/Shared/Error.cshtml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>@model ErrorViewModel\n@{\n    ViewData[\"Title\"] = \"Error\";\n}\n\n<h1 class=\"text-danger\">Error.</h1>\n<h2 class=\"text-danger\">An error occurred while processing your request.</h2>\n\n@if (Model.ShowRequestId)\n{\n    <p>\n        <strong>Request ID:</strong> <code>@Model.RequestId</code>\n    </p>\n}\n\n<h3>Development Mode</h3>\n<p>\n    Swapping to <strong>Development</strong> environment will display more detailed information about the error that occurred.\n</p>\n<p>\n    <strong>The Development environment shouldn't be enabled for deployed applications.</strong>\n    It can result in displaying sensitive information from exceptions to end users.\n    For local debugging, enable the <strong>Development</strong> environment by setting the <strong>ASPNETCORE_ENVIRONMENT</strong> environment variable to <strong>Development</strong>\n    and restarting the app.\n</p>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Mission08_Team0112/Views/Shared/Error.cshtml b/Mission08_Team0112/Views/Shared/Error.cshtml
+--- a/Mission08_Team0112/Views/Shared/Error.cshtml	(revision fa783174efb7215a96f64b794f3b88f43ac11c1c)
++++ b/Mission08_Team0112/Views/Shared/Error.cshtml	(date 1740589210006)
+@@ -22,4 +22,4 @@
+     It can result in displaying sensitive information from exceptions to end users.
+     For local debugging, enable the <strong>Development</strong> environment by setting the <strong>ASPNETCORE_ENVIRONMENT</strong> environment variable to <strong>Development</strong>
+     and restarting the app.
+-</p>
++</p>
+\ No newline at end of file
+Index: Mission08_Team0112/Views/Shared/_Layout.cshtml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>@ViewData[\"Title\"] - Mission08_Team0112</title>\n    <link rel=\"stylesheet\" href=\"~/lib/bootstrap/dist/css/bootstrap.min.css\" />\n    <link rel=\"stylesheet\" href=\"~/css/site.css\" asp-append-version=\"true\" />\n    <link rel=\"stylesheet\" href=\"~/Mission08_Team0112.styles.css\" asp-append-version=\"true\" />\n</head>\n<body>\n    <header>\n        <nav class=\"navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3\">\n            <div class=\"container-fluid\">\n                <a class=\"navbar-brand\" asp-area=\"\" asp-controller=\"Home\" asp-action=\"Index\">Mission08_Team0112</a>\n                <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\".navbar-collapse\" aria-controls=\"navbarSupportedContent\"\n                        aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n                    <span class=\"navbar-toggler-icon\"></span>\n                </button>\n                <div class=\"navbar-collapse collapse d-sm-inline-flex justify-content-between\">\n                    <ul class=\"navbar-nav flex-grow-1\">\n                        <li class=\"nav-item\">\n                            <a class=\"nav-link text-dark\" asp-area=\"\" asp-controller=\"Home\" asp-action=\"Index\">Home</a>\n                        </li>\n                        <li class=\"nav-item\">\n                            <a class=\"nav-link text-dark\" asp-area=\"\" asp-controller=\"Home\" asp-action=\"Privacy\">Privacy</a>\n                        </li>\n                    </ul>\n                </div>\n            </div>\n        </nav>\n    </header>\n    <div class=\"container\">\n        <main role=\"main\" class=\"pb-3\">\n            @RenderBody()\n        </main>\n    </div>\n\n    <footer class=\"border-top footer text-muted\">\n        <div class=\"container\">\n            &copy; 2025 - Mission08_Team0112 - <a asp-area=\"\" asp-controller=\"Home\" asp-action=\"Privacy\">Privacy</a>\n        </div>\n    </footer>\n    <script src=\"~/lib/jquery/dist/jquery.min.js\"></script>\n    <script src=\"~/lib/bootstrap/dist/js/bootstrap.bundle.min.js\"></script>\n    <script src=\"~/js/site.js\" asp-append-version=\"true\"></script>\n    @await RenderSectionAsync(\"Scripts\", required: false)\n</body>\n</html>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Mission08_Team0112/Views/Shared/_Layout.cshtml b/Mission08_Team0112/Views/Shared/_Layout.cshtml
+--- a/Mission08_Team0112/Views/Shared/_Layout.cshtml	(revision fa783174efb7215a96f64b794f3b88f43ac11c1c)
++++ b/Mission08_Team0112/Views/Shared/_Layout.cshtml	(date 1740589210008)
+@@ -1,49 +1,49 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+-    <meta charset="utf-8" />
+-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++    <meta charset="utf-8"/>
++    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     <title>@ViewData["Title"] - Mission08_Team0112</title>
+-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+-    <link rel="stylesheet" href="~/Mission08_Team0112.styles.css" asp-append-version="true" />
++    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
++    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
++    <link rel="stylesheet" href="~/Mission08_Team0112.styles.css" asp-append-version="true"/>
+ </head>
+ <body>
+-    <header>
+-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+-            <div class="container-fluid">
+-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Mission08_Team0112</a>
+-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+-                        aria-expanded="false" aria-label="Toggle navigation">
+-                    <span class="navbar-toggler-icon"></span>
+-                </button>
+-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+-                    <ul class="navbar-nav flex-grow-1">
+-                        <li class="nav-item">
+-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+-                        </li>
+-                        <li class="nav-item">
+-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+-                        </li>
+-                    </ul>
+-                </div>
+-            </div>
+-        </nav>
+-    </header>
+-    <div class="container">
+-        <main role="main" class="pb-3">
+-            @RenderBody()
+-        </main>
+-    </div>
++<header>
++    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
++        <div class="container-fluid">
++            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Mission08_Team0112</a>
++            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
++                    aria-expanded="false" aria-label="Toggle navigation">
++                <span class="navbar-toggler-icon"></span>
++            </button>
++            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
++                <ul class="navbar-nav flex-grow-1">
++                    <li class="nav-item">
++                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
++                    </li>
++                    <li class="nav-item">
++                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
++                    </li>
++                </ul>
++            </div>
++        </div>
++    </nav>
++</header>
++<div class="container">
++    <main role="main" class="pb-3">
++        @RenderBody()
++    </main>
++</div>
+ 
+-    <footer class="border-top footer text-muted">
+-        <div class="container">
+-            &copy; 2025 - Mission08_Team0112 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+-        </div>
+-    </footer>
+-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+-    <script src="~/js/site.js" asp-append-version="true"></script>
+-    @await RenderSectionAsync("Scripts", required: false)
++<footer class="border-top footer text-muted">
++    <div class="container">
++        &copy; 2025 - Mission08_Team0112 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
++    </div>
++</footer>
++<script src="~/lib/jquery/dist/jquery.min.js"></script>
++<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
++<script src="~/js/site.js" asp-append-version="true"></script>
++@await RenderSectionAsync("Scripts", required: false)
+ </body>
+-</html>
++</html>
+\ No newline at end of file
