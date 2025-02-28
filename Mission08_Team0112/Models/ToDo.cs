@@ -6,6 +6,8 @@ namespace Mission08_Team0112.Models;
 public partial class ToDo
 {
     public int TaskId { get; set; }
+    
+    public string TaskName { get; set; }
 
     public string? DueDate { get; set; }
 
@@ -13,7 +15,7 @@ public partial class ToDo
 
     public int CategoryId { get; set; }
 
-    public int Completed { get; set; }
+    public bool Completed { get; set; }
 
     public virtual Category Category { get; set; } = null!;
 }
