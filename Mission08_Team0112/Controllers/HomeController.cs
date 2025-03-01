@@ -60,10 +60,23 @@ public class HomeController : Controller
         [HttpPost]
         public IActionResult Edit(ToDo updatedInfo)
         {
-            _context.Update(updatedInfo);
-            _context.SaveChanges();
+            var existingTask = _context.ToDos.SingleOrDefault(x => x.TaskId == updatedInfo.TaskId);
+
+            if (existingTask != null)
+            {
+                existingTask.TaskName = updatedInfo.TaskName;
+                existingTask.DueDate = updatedInfo.DueDate;
+                existingTask.Quadrant = updatedInfo.Quadrant;
+                existingTask.CategoryId = updatedInfo.CategoryId;
+                existingTask.Completed = updatedInfo.Completed;
+
+                _context.SaveChanges(); // Save only changes, not create a new record
+            }
+
             return RedirectToAction("Quadrant");
         }
+
+        
         
         [HttpGet]
         public IActionResult Delete(int id)

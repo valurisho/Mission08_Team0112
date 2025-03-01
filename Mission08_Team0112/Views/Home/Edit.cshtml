@@ -8,7 +8,7 @@
 <h2>Edit Task</h2>
 
 <form asp-action="Edit" asp-controller="Home" method="post">
-    <input type="hidden" name="Id" value="@Model.TaskId" />
+    <input type="hidden" asp-for="TaskId" />
 
     <div class="mb-3">
         <label for="TaskName" class="form-label">Task Name</label>
@@ -44,9 +44,10 @@
 
 
     <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="Completed" name="Completed" @(Model.Completed ? "checked" : "") />
-        <label for="Completed" class="form-check-label">Mark as Completed</label>
+        <input asp-for="Completed" class="form-check-input" />
+        <label class="form-check-label" for="Completed">Mark as Completed</label>
     </div>
+
 
     <button type="submit" class="btn btn-primary">Update Task</button>
 </form>

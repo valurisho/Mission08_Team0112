@@ -12,7 +12,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mission08_Team0112/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mission08_Team0112/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mission08_Team0112/7_habits_database.db" beforeDir="false" afterPath="$PROJECT_DIR$/Mission08_Team0112/7_habits_database.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mission08_Team0112/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Mission08_Team0112/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mission08_Team0112/Views/Home/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Mission08_Team0112/Views/Home/Create.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mission08_Team0112/Views/Home/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Mission08_Team0112/Views/Home/Edit.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +78,7 @@
     ".NET Launch Settings Profile.Mission08_Team0112: http.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "peter",
+    "git-widget-placeholder": "#16 on peter",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
