@@ -16,9 +16,9 @@
     </div>
 
     <div class="mb-3">
-        <label for="DueDate" class="form-label">Due Date</label>
-        <input type="date" class="form-control" id="DueDate" name="DueDate" @*value="@Model.DueDate?.ToString("yyyy-MM-dd")"*@ />
+        <input asp-for="DueDate" class="form-control" type="date" />
     </div>
+
 
     <div class="mb-3">
         <label for="Quadrant" class="form-label">Quadrant</label>
@@ -33,7 +33,7 @@
     <div class="mb-3">
         <label for="CategoryId" class="form-label">Category</label>
         <select asp-for="CategoryId" class="form-control">
-            <option value="">Select a category</option> <!-- Prevent empty submission -->
+            <option value="">Select a category</option> 
             @foreach (Category cat in ViewBag.Categories)
             {
                 <option value="@cat.CategoryId">@cat.CategoryName</option>
