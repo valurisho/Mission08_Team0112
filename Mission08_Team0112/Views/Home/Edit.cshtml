@@ -31,14 +31,17 @@
     </div>
 
     <div class="mb-3">
-        <label for="Category" class="form-label">Category</label>
-        <select class="form-control" id="Category" name="Category">
+        <label for="CategoryId" class="form-label">Category</label>
+        <select asp-for="CategoryId" class="form-control">
+            <option value="">Select a category</option> <!-- Prevent empty submission -->
             @foreach (Category cat in ViewBag.Categories)
             {
                 <option value="@cat.CategoryId">@cat.CategoryName</option>
             }
         </select>
+        <span asp-validation-for="CategoryId" class="text-danger"></span>
     </div>
+
 
     <div class="mb-3 form-check">
         <input type="checkbox" class="form-check-input" id="Completed" name="Completed" @(Model.Completed ? "checked" : "") />

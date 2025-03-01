@@ -42,7 +42,8 @@ public class HomeController : Controller
         {
             _context.Add(response);
             _context.SaveChanges();
-            return View("Quadrant",response);
+
+            return RedirectToAction("Quadrant"); 
         }
         
         [HttpGet]
