@@ -15,11 +15,7 @@ public class HomeController : Controller
     {
         _context = temp;
     }
-
-    public IActionResult Index()
-    {
-        return View();
-    }
+    
     public IActionResult Quadrant()
     {
         //filter and only pass the ones which are completed
@@ -93,15 +89,6 @@ public class HomeController : Controller
             _context.SaveChanges();
             return RedirectToAction("Quadrant");
         }
-
-        /*public IActionResult Quadrants()
-        {
-            var tasks = new List<TaskViewModel>
-            {
-                new TaskViewModel { TaskName = "Project Work", DueDate = DateTime.Now, Quadrant = 1, CategoryId = 3 },
-                new TaskViewModel { TaskName = "Study Session", DueDate = DateTime.Now.AddDays(3), Quadrant = 2, CategoryId = 2 }
-            };
-            return View(tasks); // Loads Views/Tasks/Quadrants.cshtml
-        }*/
+    
     
 }
