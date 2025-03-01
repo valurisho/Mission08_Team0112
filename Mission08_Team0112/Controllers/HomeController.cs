@@ -15,11 +15,7 @@ public class HomeController : Controller
     {
         _context = temp;
     }
-
-    public IActionResult Index()
-    {
-        return View();
-    }
+    
     public IActionResult Quadrant()
     {
         //filter and only pass the ones which are completed
