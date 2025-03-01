@@ -1,3 +1,5 @@
+@model List<ToDo>
+
 <div class="container border border-dark border-3 rounded-3 bg-light">
     
     @* First row *@
@@ -34,21 +36,34 @@
 
         <div class="col-5 text-center border-end border-dark">
             <h6 class="fw-bold">Quadrant 1</h6>
-            <p>Read Scrum Book</p>
-            <p>Read Scrum Book</p>
-            <p>Read Scrum Book</p>
-            <p>Read Scrum Book</p>
-         
+            @foreach (var task in Model)
+            {
+                @if (task.Quadrant == 1 && !task.Completed)
+                {
+                    <div class="d-flex justify-content-center align-items-center mb-2">
+                        <p class="mb-0">@task.TaskName</p>
+                        <a class="btn btn-info ms-2" asp-controller="Home" asp-action="Edit" asp-route-id="@task.TaskId">Edit</a>
+                        <a class="btn btn-danger ms-2" asp-controller="Home" asp-action="Delete" asp-route-id="@task.TaskId">Delete</a>
+                    </div>
+                }
+            }
             
         </div>
 
         <div class="col-5 text-center">
             <h6 class="fw-bold">Quadrant 2</h6>
-            <p>IS 414 Test </p>
-            <p>Read Scrum Book</p>
-            <p>Read Scrum Book</p>
-            <p>Read Scrum Book</p>
-            <p>Read Scrum Book</p>
+            @foreach (var task in Model)
+            {
+                @if (task.Quadrant == 2 && !task.Completed)
+                {
+                    <div class="d-flex justify-content-center align-items-center mb-2">
+                        <p class="mb-0">@task.TaskName</p>
+                        <a class="btn btn-info ms-2" asp-controller="Home" asp-action="Edit" asp-route-id="@task.TaskId">Edit</a>
+                        <a class="btn btn-danger ms-2" asp-controller="Home" asp-action="Delete" asp-route-id="@task.TaskId">Delete</a>
+                    </div>
+                }
+            }
+            
         </div>
 
     </div>
@@ -61,18 +76,36 @@
 
         <div class="col-5 text-center border-end border-dark">
             <h6 class="fw-bold">Quadrant 3</h6>
-            <p>Read Scrum Book</p>
-            <p>Read Scrum Book</p>
-            <p>Read Scrum Book</p>
-            <p>Read Scrum Book</p>
+            @foreach (var task in Model)
+            {
+                @if (task.Quadrant == 3 && !task.Completed)
+                {
+                    <div class="d-flex justify-content-center align-items-center mb-2">
+                        <p class="mb-0">@task.TaskName</p>
+                        <a class="btn btn-info ms-2" asp-controller="Home" asp-action="Edit" asp-route-id="@task.TaskId">Edit</a>
+                        <a class="btn btn-danger ms-2" asp-controller="Home" asp-action="Delete" asp-route-id="@task.TaskId">Delete</a>
+                    </div>
+                }
+            }
+          
+            
         </div>
 
         <div class="col-5 text-center">
             <h6 class="fw-bold">Quadrant 4</h6>
-            <p>Read Scrum Book</p>
-            <p>Read Scrum Book</p>
-            <p>Read Scrum Book</p>
-            <p>Read Scrum Book</p>
+            @foreach (var task in Model)
+            {
+                @if (task.Quadrant == 4 && !task.Completed)
+                {
+                    <div class="d-flex justify-content-center align-items-center mb-2">
+                        <p class="mb-0">@task.TaskName</p>
+                        <a class="btn btn-info ms-2" asp-controller="Home" asp-action="Edit" asp-route-id="@task.TaskId">Edit</a>
+                        <a class="btn btn-danger ms-2" asp-controller="Home" asp-action="Delete" asp-route-id="@task.TaskId">Delete</a>
+                    </div>
+                }
+            }
+        
+            
         </div>
 
     </div>

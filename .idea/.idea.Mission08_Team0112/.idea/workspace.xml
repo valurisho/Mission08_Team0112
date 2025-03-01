@@ -9,13 +9,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0137fc5-66ca-49d6-a429-6d599d83198f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Mission08_Team0112/Models/ApplicationDbContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mission08_Team0112/Views/Home/Delete.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mission08_Team0112/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mission08_Team0112/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mission08_Team0112/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Mission08_Team0112/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mission08_Team0112/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Mission08_Team0112/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mission08_Team0112/Models/ToDo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Mission08_Team0112/Models/ToDo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mission08_Team0112/Views/Home/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Mission08_Team0112/Views/Home/Create.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mission08_Team0112/Views/Home/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Mission08_Team0112/Views/Home/Edit.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mission08_Team0112/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Mission08_Team0112/Views/Home/Index.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="peter" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,7 +41,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/valurisho/Mission08_Team0112.git&quot;,
-    &quot;accountId&quot;: &quot;c1ec4bdb-ad42-4df2-b386-2486bded0ea1&quot;
+    &quot;accountId&quot;: &quot;e38f1671-d541-4c7c-a09b-77d21f9edd37&quot;
   },
   &quot;recentNewPullRequestHead&quot;: {
     &quot;server&quot;: {
@@ -56,20 +55,12 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Users/peterhamilton/RiderProjects/Mission08_Team0112/Mission08_Team0112/Controllers/HomeController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/peterhamilton/RiderProjects/Mission08_Team0112/Mission08_Team0112/Controllers/HomeController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/peterhamilton/RiderProjects/Mission08_Team0112/Mission08_Team0112/Controllers/TaskController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/peterhamilton/RiderProjects/Mission08_Team0112/Mission08_Team0112/Models/TaskViewModel.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/peterhamilton/RiderProjects/Mission08_Team0112/Mission08_Team0112/Views/Home/Create.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/peterhamilton/RiderProjects/Mission08_Team0112/Mission08_Team0112/Views/Home/Edit.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/peterhamilton/RiderProjects/Mission08_Team0112/Mission08_Team0112/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/peterhamilton/RiderProjects/Mission08_Team0112/Mission08_Team0112/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/peterhamilton/RiderProjects/Mission08_Team0112/Mission08_Team0112/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/peterhamilton/RiderProjects/Mission08_Team0112/Mission08_Team0112/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/peterhamilton/RiderProjects/Mission08_Team0112/Mission08_Team0112/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/peterhamilton/RiderProjects/Mission08_Team0112/Mission08_Team0112/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/peterhamilton/RiderProjects/Mission08_Team0112/Mission08_Team0112/Views/Tasks/Create.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/peterhamilton/RiderProjects/Mission08_Team0112/Mission08_Team0112/Views/Tasks/Edit.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/valu.montoya/RiderProjects/Mission08_Team0112/Mission08_Team0112/Controllers/HomeController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/valu.montoya/RiderProjects/Mission08_Team0112/Mission08_Team0112/Controllers/HomeController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/valu.montoya/RiderProjects/Mission08_Team0112/Mission08_Team0112/Models/ErrorViewModel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/valu.montoya/RiderProjects/Mission08_Team0112/Mission08_Team0112/Models/ErrorViewModel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/valu.montoya/RiderProjects/Mission08_Team0112/Mission08_Team0112/Views/_ViewImports.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/valu.montoya/RiderProjects/Mission08_Team0112/Mission08_Team0112/Views/_ViewImports.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -86,7 +77,7 @@
     ".NET Launch Settings Profile.Mission08_Team0112: http.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "peter",
+    "git-widget-placeholder": "Lisa2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -141,7 +132,6 @@
       <workItem from="1740589207081" duration="5981000" />
       <workItem from="1740670680119" duration="343000" />
       <workItem from="1740671137465" duration="403000" />
-      <workItem from="1740719152696" duration="1982000" />
     </task>
     <task id="LOCAL-00001" summary="Just add controller for Quadrant">
       <option name="closed" value="true" />
@@ -159,23 +149,7 @@
       <option name="project" value="LOCAL" />
       <updated>1740670783197</updated>
     </task>
-    <task id="LOCAL-00003" summary="a few  changes">
-      <option name="closed" value="true" />
-      <created>1740678616198</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1740678616198</updated>
-    </task>
-    <task id="LOCAL-00004" summary="changes">
-      <option name="closed" value="true" />
-      <created>1740678826014</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1740678826014</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,8 +202,25 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Just add controller for Quadrant" />
     <MESSAGE value="add things to controller" />
-    <MESSAGE value="a few  changes" />
-    <MESSAGE value="changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="add things to controller" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Mission08_Team0112/Controllers/HomeController.cs</url>
+          <line>26</line>
+          <properties documentPath="$PROJECT_DIR$/Mission08_Team0112/Controllers/HomeController.cs" containingFunctionPresentation="Lambda expression inside Method 'Quadrant'">
+            <startOffsets>
+              <option value="630" />
+            </startOffsets>
+            <endOffsets>
+              <option value="640" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

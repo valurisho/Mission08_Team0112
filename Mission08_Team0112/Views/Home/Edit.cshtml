@@ -1,5 +1,5 @@
 
-@model Mission08_Team0112.Models.TaskViewModel
+@model ToDo
 
 @{
     ViewData["Title"] = "Edit Task";
@@ -8,7 +8,7 @@
 <h2>Edit Task</h2>
 
 <form asp-action="Edit" asp-controller="Home" method="post">
-    <input type="hidden" name="Id" value="@Model.CategoryId" />
+    <input type="hidden" name="Id" value="@Model.TaskId" />
 
     <div class="mb-3">
         <label for="TaskName" class="form-label">Task Name</label>
@@ -17,7 +17,7 @@
 
     <div class="mb-3">
         <label for="DueDate" class="form-label">Due Date</label>
-        <input type="date" class="form-control" id="DueDate" name="DueDate" value="@Model.DueDate?.ToString("yyyy-MM-dd")" />
+        <input type="date" class="form-control" id="DueDate" name="DueDate" @*value="@Model.DueDate?.ToString("yyyy-MM-dd")"*@ />
     </div>
 
     <div class="mb-3">
@@ -33,9 +33,9 @@
     <div class="mb-3">
         <label for="Category" class="form-label">Category</label>
         <select class="form-control" id="Category" name="Category">
-            @foreach (var category in ViewBag.Categories)
+            @foreach (Category cat in ViewBag.Categories)
             {
-                <option value="@category.Value" selected="@(Model.CategoryId.ToString() == category.Value)">@category.Text</option>
+                <option value="@cat.CategoryId">@cat.CategoryName</option>
             }
         </select>
     </div>

@@ -1,7 +1,16 @@
+using Microsoft.EntityFrameworkCore;
+using Mission08_Team0112.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// set up service to be able to use DbContext file
+builder.Services.AddDbContext<_7HabitsDatabaseContext>(options =>
+{
+    options.UseSqlite(builder.Configuration["ConnectionStrings:TaskConnection"]);
+});
 
 var app = builder.Build();
 

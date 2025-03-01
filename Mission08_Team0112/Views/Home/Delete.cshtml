@@ -1,0 +1,9 @@
+@model ToDo
+<h2>Confirm Deletion</h2>
+<br/>
+<h4>Are yoy sure you want to delete the "@Model.TaskName" task?</h4>
+<form asp-controller="Home" asp-action="Delete" method="post">
+    <input type="hidden" asp-for="TaskId"/>
+    <button type="submit">Delete</button>
+    <a class="btn btn-info" asp-controller="Home" asp-action="Quadrant">Cancel</a>
+</form>
